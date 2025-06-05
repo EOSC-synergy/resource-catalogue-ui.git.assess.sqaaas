@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/resource-catalogue-ui:
+      branch: master
+      repo: https://github.com/madgeek-arc/resource-catalogue-ui.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-buff-cassowary.sh
+        container: qc.acc_pokey-sangria-fox
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-goldenrod-emu.sh
+        container: qc.doc_snoopy-cerulean-heron
+      github.com/madgeek-arc/resource-catalogue-ui git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-zucchini-terrier.sh
+        container: qc.doc_dorky-brass-deer
+      github.com/madgeek-arc/resource-catalogue-ui markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-dandelion-swan.sh
+        container: qc.doc_blurry-puce-wolfhound
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-sangria-pinscher.sh
+        container: qc.lic_whiny-jade-fossa
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-gamboge-foxhound.sh
+        container: qc.sty_clammy-peach-rabbit
+      github.com/madgeek-arc/resource-catalogue-ui jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-maroon-nightingale.sh
+        container: qc.sty_whiny-dandelion-moose
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/resource-catalogue-ui get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-russet-beaver.sh
+        container: qc.ver_tacky-wisteria-turkey
+timeout: 5400
