@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-mustard-dunker.sh
-        container: qc.acc_goopy-myrtle-swan
+        - /usr/bin/env sh .sqa/script.muggy-rose-buzzard.sh
+        container: qc.acc_geeky-lilac-pig
   QC.Doc:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-ultramarine-duck.sh
-        container: qc.doc_tasty-purple-gibbon
+        - /usr/bin/env sh .sqa/script.surly-olive-cat.sh
+        container: qc.doc_silly-cardinal-ragdoll
       github.com/madgeek-arc/resource-catalogue-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-buff-drever.sh
-        container: qc.doc_ready-amethyst-dhole
+        - /usr/bin/env sh .sqa/script.snoopy-maroon-scorpion.sh
+        container: qc.doc_homely-persimmon-avocet
       github.com/madgeek-arc/resource-catalogue-ui markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-scarlet-bulldog.sh
-        container: qc.doc_seedy-grey-whippet
+        - /usr/bin/env sh .sqa/script.stinky-ivory-toucan.sh
+        container: qc.doc_craggy-azure-beaver
   QC.Lic:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-wisteria-jellyfish.sh
-        container: qc.lic_wimpy-denim-lion
+        - /usr/bin/env sh .sqa/script.shaky-ivory-raccoon.sh
+        container: qc.lic_goopy-purple-owl
   QC.Sty:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-sepia-slug.sh
-        container: qc.sty_woolly-corn-coati
+        - /usr/bin/env sh .sqa/script.skinny-tan-husky.sh
+        container: qc.sty_clammy-xanthic-fousek
       github.com/madgeek-arc/resource-catalogue-ui jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-viridian-cockroach.sh
-        container: qc.sty_shaggy-lilac-mayfly
+        - /usr/bin/env sh .sqa/script.lousy-cinnabar-crane.sh
+        container: qc.sty_grumpy-saffron-stoat
   QC.Ver:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-amaranth-beagle.sh
-        container: qc.ver_queasy-violet-butterfly
+        - /usr/bin/env sh .sqa/script.frumpy-pear-millipede.sh
+        container: qc.ver_flaky-azure-devil
 timeout: 5400
