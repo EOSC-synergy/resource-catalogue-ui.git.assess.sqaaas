@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/madgeek-arc/resource-catalogue-ui:
       branch: master
@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-rose-buzzard.sh
-        container: qc.acc_geeky-lilac-pig
+        - /usr/bin/env sh .sqa/script.flamingo_fearless_rabbit.sh
+        container: qc.acc_horizon_carefree_raven
   QC.Doc:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-olive-cat.sh
-        container: qc.doc_silly-cardinal-ragdoll
+        - /usr/bin/env sh .sqa/script.red_passionate_cobra.sh
+        container: qc.doc_cerise_rugged_kangaroo
       github.com/madgeek-arc/resource-catalogue-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-maroon-scorpion.sh
-        container: qc.doc_homely-persimmon-avocet
+        - /usr/bin/env sh .sqa/script.peach_tactful_eagle.sh
+        container: qc.doc_cherry_loyal_axolotl
       github.com/madgeek-arc/resource-catalogue-ui markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-ivory-toucan.sh
-        container: qc.doc_craggy-azure-beaver
+        - /usr/bin/env sh .sqa/script.ruby_zany_ferret.sh
+        container: qc.doc_taupe_determined_butterfly
   QC.Lic:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-ivory-raccoon.sh
-        container: qc.lic_goopy-purple-owl
+        - /usr/bin/env sh .sqa/script.amaranth_focused_wasp.sh
+        container: qc.lic_pearl_perky_macaw
   QC.Sty:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-tan-husky.sh
-        container: qc.sty_clammy-xanthic-fousek
+        - /usr/bin/env sh .sqa/script.fern_plucky_gorilla.sh
+        container: qc.sty_navy_jubilant_bison
       github.com/madgeek-arc/resource-catalogue-ui jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-cinnabar-crane.sh
-        container: qc.sty_grumpy-saffron-stoat
+        - /usr/bin/env sh .sqa/script.lapis_dizzy_pegasus.sh
+        container: qc.sty_mulberry_bewildered_stork
   QC.Ver:
     repos:
       github.com/madgeek-arc/resource-catalogue-ui get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-pear-millipede.sh
-        container: qc.ver_flaky-azure-devil
+        - /usr/bin/env sh .sqa/script.raspberry_skeptical_buffalo.sh
+        container: qc.ver_peony_graceful_gerbil
 timeout: 5400
